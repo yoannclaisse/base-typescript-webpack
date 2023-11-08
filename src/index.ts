@@ -26,4 +26,34 @@ const array2: Array<number> = [1, 2, 3]
 const tuple: [number, number] = [1, 2]
 const tuple2: [number, string] = [1, '2']
 
+// ENUM
+// sert a faire un lien entre un nom et une valeur numérique
+// Chaque element  de l'enum correspond à un index/nombre et part de zéro
+enum XhrReadyState {
+    UNSENT,
+    OPENED,
+    HEADERS_RECEIVED,
+    LOADING,
+    DONE,
+}
 
+// Retour de l'enum
+// console.log(XhrReadyState.LOADING)
+
+const readyState: number = 0;
+
+if (readyState === XhrReadyState.UNSENT) {
+    // request configured
+}
+if (readyState === XhrReadyState.OPENED) {
+    // entête de la réponse recu
+}
+if (readyState === XhrReadyState.HEADERS_RECEIVED) {
+    // chargement en cours
+}
+if (readyState === XhrReadyState.LOADING) {
+    // terminée
+}
+if (readyState === XhrReadyState.DONE) {
+    // Terminée
+}
