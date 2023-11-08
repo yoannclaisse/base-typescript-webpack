@@ -74,7 +74,7 @@ function add(num1: number, num2: number): void {
 // Le type never veut dire que la fonction ne va jamais retourner, il ne faut pas que la fonction se termine
 function loop(error: any): never {
     // while(true) {
-
+    // ...
     // }
     // OU avec une erreur
     throw new Error(error)
