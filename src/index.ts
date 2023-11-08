@@ -57,3 +57,25 @@ if (readyState === XhrReadyState.LOADING) {
 if (readyState === XhrReadyState.DONE) {
     // Terminée
 }
+
+// LES TYPES NULL, VOID, UNDIFINED ET NEVER
+// TYPE NULL ET UNDIFINED
+// Par défault ces types seront null
+const foo3:null = null
+const foo4:undefined = undefined
+
+// LE TYPE VOID
+// pricipalement pour les fonctions
+// le type void veut dire que la fonction ne doit rien retourner
+function add(num1: number, num2: number): void {
+    console.log(num1 + num2)
+}
+
+// Le type never veut dire que la fonction ne va jamais retourner, il ne faut pas que la fonction se termine
+function loop(error: any): never {
+    // while(true) {
+
+    // }
+    // OU avec une erreur
+    throw new Error(error)
+}
