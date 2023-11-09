@@ -79,3 +79,47 @@ function loop(error: any): never {
     // OU avec une erreur
     throw new Error(error)
 }
+
+// LES INTERFACES
+
+
+// ----------------------AUTRE EXEMPLES D'INTERFACES------------------
+// Une interface décris la forme d'un objet, c'est un contrat
+// Tout ce que va être défini dans l'interface doit être présent dans ce qui l'emploi
+// Une interface est un contrat qui définit la forme que doit prendre un objet JavaScript (objets littéraux, classes et fonctions).
+// Les points d'interrogation rendent les paramètres optionneles il n'est pa obligatoire de les renseigner, ou peuvent être renseigner plus tard
+interface UserInterface {
+    readonly username: string; // ce username est juste en readonly, il est initialisé au début, et ne pourra pas être réasigné par la suite
+    age: number;
+    IsDrinking?: boolean;
+    isHealthy?: boolean;
+    isSmoking?: boolean;
+}
+
+// là c'est une variable du type de l'interface avec des valeurs définis
+const user: UserInterface = {
+    username: 'Yo',
+    age: 34,
+    IsDrinking: true,
+    isHealthy: true,
+    isSmoking: false,
+}
+
+function death(user: UserInterface) {}
+
+function goodShape(user: UserInterface) {}
+
+// ici on rend le truc un peu plus maléable
+const newUser: UserInterface = {
+    username: 'clovis',
+    age: 50,
+}
+
+// ----------------------------------------------------
+
+function greet(user: {username: string}): void {
+    console.log(`hello ${user.username}`)
+}
+
+greet(user)
+
